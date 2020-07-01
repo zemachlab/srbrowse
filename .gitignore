@@ -1,0 +1,9 @@
+analyses/
+annotations/
+genomes/
+local/
+logs/
+node_modules/
+tmp/
+tracks/
+package-lock.json

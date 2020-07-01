@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keithdharris/srbrowse.git"
+    "url": "git+https://github.com/zemachlab/srbrowse.git"
   },
   "keywords": [
     "NGS"
   ],
   "author": "",
   "license": "CC-BY-4.0",
-  "homepage": "https://github.com/keithdharris/srbrowse#readme",
+  "homepage": "https://github.com/zemachlab/srbrowse#readme",
   "dependencies": {
     "express": "^4.17.1",
     "redis": "^2.8.0",
