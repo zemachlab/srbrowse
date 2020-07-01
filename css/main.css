@@ -1,0 +1,441 @@
+*{padding:0;margin:0;border:0;box-sizing:border-box}
+@font-face {
+	font-family: 'icons';
+	src:  url('fonts/icomoon.eot?1yvuwb');
+	src:  url('fonts/icomoon.eot?1yvuwb#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?1yvuwb') format('truetype'),
+		url('fonts/icomoon.woff?1yvuwb') format('woff'),
+		url('fonts/icomoon.svg?1yvuwb#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+[data-icon]:before {
+	content: attr(data-icon);
+	font-family: 'icons' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body, input, select, textarea {
+	font-family: Open Sans;
+	font-size: 16px;
+	line-height: 1.45;
+}
+p {
+	margin: 0 0 15px;
+}
+a {
+	color: #0b0;
+	cursor: pointer;
+}
+h1, h2, h3 {
+	font-weight: 300;
+	margin: 0 0 10px;
+}
+input, select, textarea {
+	border: 1px solid #eee;
+	padding: 2px 5px;
+}
+header {
+	display: inline-block;
+	width: 100%;
+	background: #fafafa;
+	border-bottom: 1px solid #eee;
+	padding: 5px 0;
+	line-height: 32px;
+	margin-bottom: 15px;
+}
+header a, header span {
+	float: left;
+	margin-right: 10px;
+}
+.wrap {
+	margin: 0 auto;
+	max-width: 98%
+}
+.left {
+	float: left;
+	width: 17.5%;
+	margin-right: 2.5%;
+}
+.right {
+	float: left;
+	width: 80%;
+}
+.fright {
+	float: right;
+	margin-left: 5px;
+}
+.fleft {
+	float: left;
+	margin-right: 5px;
+}
+.clear {
+	clear: both;
+}
+form p {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+form label {
+	float: left;
+	width: 15%;
+	margin-right: 10%;
+}
+form input, form select, form textarea {
+	float: left;
+}
+#hover {
+	display: none;
+	position: fixed;
+	width: 80%;
+	left: 10%;
+	top: 10%;
+	z-index: 5;
+	background: #fff;
+	padding: 15px 20px 10px;
+	text-align: left;
+	box-shadow: 1px 1px 7px rgba(0,0,0,0.1);
+}
+#hover.small {
+	text-align: center;
+	font-size: 20px;
+	width: 20%;
+	left: 40%;
+}
+#darkbox {
+	display: none;
+	background: rgba(0,0,0,0.2);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+}
+.dropdown {
+	position: absolute;
+	display: none;
+	top: 35px;
+	right: 0;
+	width: 250px;
+	background: #f9f9f9;
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+	padding: 12px 10px;
+	font-size: 14px;
+}
+.dropdown h4 {
+	font-weight: normal;
+	margin-bottom: 8px;
+	font-size: 16px;
+}
+.dropdown.show {
+	display: block;
+}
+.dropdown p:last-child {
+	margin: 0;
+}
+input[data-value] {
+	width: 40px;
+}
+.button {
+	background: #0b0;
+	color: #fff;
+	padding: 5px 7px;
+	font-size: 16px !important;
+}
+.button.small {
+	margin-left: 3px;
+	padding: 3px 7px;
+}
+.button.disabled {
+	background: #999;
+	cursor: not-allowed;
+}
+.notify-menu {
+	display:none;
+	position: absolute;
+	z-index:100;
+	right: 1%;
+	top: 40px;
+	background: #f5f5f5;
+	text-align: left;
+	padding: 6px;
+	font-size: 14px;
+	color: #000;
+	width: 300px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+.notify-menu [data-id] {
+	cursor: pointer;
+}
+.notify-menu h4 {
+	font-size: 16px;
+}
+.notify-menu .progress {
+	float: left;
+	position:relative;
+	height: 30px;
+	background: #fff;
+	width: 70%;
+	padding: 2px 2px;
+	margin-bottom: 6px;
+}
+.notify-menu [data-id]:last-child .progress {
+	margin: 0;
+}
+.notify-menu .name {
+	float: left;
+	width: 30%;
+	line-height: 30px;
+}
+.notify-menu .progress-bar {
+	height: 26px;
+	background: #29b;
+}
+.progress:before {
+	content: attr(data-progress);
+	position: absolute;
+	width: 100%;
+	line-height: 30px;
+	top: 0;
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.4);
+	text-align: center;
+}
+.notify-button:before {
+	content: attr(data-processes);
+	position: absolute;
+	top: -1px;
+	right: -13px;
+	color: #fff;
+	background: #f90;
+	line-height: 1;
+	border-radius: 10px;
+	padding: 2px 4px;
+	font-size: 11px;
+}
+.notify-button[data-processes="0"]:before {
+	display: none;
+}
+.notify-button {
+	position: relative;
+}
+
+/* Datasets */
+.table, .td {
+	border: 1px solid #eee;
+}
+.table {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15px;
+	border-width: 1px 0 0 0;
+	font-size: 14px;
+}
+.th {
+	font-weight: 300;
+}
+.td {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	border-width: 0 0 1px 0;
+}
+.th .td {
+	background: #f6f6f6;
+}
+.td-2 { 
+	width: 50%;
+}
+.td-3 { 
+	width: 33.33%;
+}
+.td-6 {
+	width: 16.66%;
+}
+.td-7 {
+	width: 14.28%;
+}
+.td-8 {
+	width: 12.5%;
+}
+.sra-results {
+	display: none;
+	clear: left;
+	max-height: 500px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+.result, .entry {
+	display: inline-block;
+	width: 100%;
+}
+.result {
+	margin: 0 0 12px;
+	background: #eee;
+	padding: 7px 10px 12px;
+}
+.result .information {
+	float: left;
+	width: 60%;
+	padding-right: 5%;
+	font-size: 14px;
+}
+.result .runs {
+	float: left;
+	width: 40%;
+	font-size: 13px;
+}
+.entry .name, .entry .details {
+	float: left;
+}
+.entry .name {
+	width: 30%;
+}
+/* Browser */
+.module {
+	margin-bottom: 25px;
+}
+.svg_container {
+}
+.left select[name=genome] {
+	width: 100%;
+	background: #fff;
+	padding: 5px 8px;
+	font-size: 16px;
+}
+.data-list {
+	height: 200px;
+	border: 1px solid #eee;
+	overflow-y: scroll;
+}
+.data-list[data-type="annotations"] {
+	height: 100px;
+}
+.data-list [data-id] {
+	padding: 2px 7px;
+	cursor: pointer;
+}
+.data-list [data-id].selected {
+	background: #f5f5f5;
+}
+.top {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.menu {
+	display: none;
+	position: absolute;
+}
+.pos-nav {
+	position: relative;
+}
+.pos-nav a {
+	font-size: 14px !important;
+}
+.pos-nav, .pos-nav input, .pos-nav select {
+	font-size: 14px;
+}
+.pos-nav select {
+	width: 120px;
+}
+.seq-nav {
+	float: left;
+	font-size: 16px;
+}
+.seq-nav a {
+	background: #444;
+	color: #fff;
+	padding: 0 7px;
+	float: left;
+	margin-left: 4px;
+}
+#tooltip {
+	display: none;
+	position: absolute;
+	background: rgba(230, 230, 230, 0.8);
+	font-size: 12px;
+}
+#tooltip a {
+	color: #333;
+	display: block;
+	width: 120px;
+	background: #f5f5f5;
+	padding: 4px 10px;
+	font-size: 13px;
+}
+#tooltip a:hover {
+	background: #eee;
+}
+#tooltip h3 {
+	margin: 0;
+	padding: 5px 10px;
+}
+#tooltip p {
+	margin: 0;
+	padding: 0 10px 5px;
+}
+text.seq { font-size:11px;text-anchor:middle;dominant-baseline:hanging; }
+text.label { font-size:14px;dominant-baseline:hanging; }
+text.position { font-size:14px;text-anchor:start;dominant-baseline:hanging; }
+text.position.right { text-anchor:end; }
+text.position.bottom { dominant-baseline:ideographic; }
+rect[data-type] { fill:#999999;opacity:0.2; }
+rect[data-type*="gene"] { fill:#00ba00;opacity:0.2; }
+rect[data-type*="exon"] { fill:#00ba00;opacity:0.5; }
+rect[data-type*="three_prime_UTR"], rect[data-type*="five_prime_UTR"] { fill:#00bbbb;opacity:0.5; }
+rect[data-type*="repeat_region"], rect[data-type*="transposon_fragment"], rect[data-type*="transposable_element"], rect[data-type*="int"] { fill:#ff9900;opacity:0.7; }
+rect[data-type*="LTR_3"], rect[data-type="LTR_5"] { fill:#ffcc00;opacity:0.7; }
+rect[data-type*="target_region"] { fill:#ba0000; opacity: 0.7; }
+rect[data-type^="C"] { fill:#bbb;opacity:1;stroke:#000; }
+rect[data-type="CG"] { fill:#0f0;opacity:1;stroke:#0f0; }
+rect[data-type="CHN"] { fill:#f0f;opacity:1;stroke:#f0f; }
+rect[data-type="CHG"] { fill:#f00;opacity:1;stroke:#f00; }
+rect[data-type="CHH"] { fill:#0ff;opacity:1;stroke:#0ff; }
+rect.grid_line { fill: #ccc; opacity: 0.5; }
+rect.read { fill:#333;opacity:0.5; }
+rect.region { fill:#00ba00; opacity:0.8; }
+rect.track { opacity: 0; }
+rect.sequence { fill:#000000;opacity:0.2; }
+rect.selected { stroke: #f90; stroke-width: 2px; fill: #fff; fill-opacity: 0.1; }
+rect.selector { fill: #f90; fill-opacity: 0.3; }
+
+/* Analyses */
+.analysis {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 25px;
+}
+.analysis-graph {
+	width: 70%;
+	float: left;
+}
+.analysis-graph .splash {
+	cursor: pointer;
+	background: #eee;
+	color: #aaa;
+	font-size: 36px;
+	text-align: center;
+	padding: 100px 0;
+}
+.analysis .control {
+	width: 30%;
+	float: right;
+	padding: 15px 20px;
+}
+.analysis .control form, .analysis .control input, .analysis .control select {
+	font-size: 14px;
+}
+.analysis .details {
+	font-size: 14px;
+}

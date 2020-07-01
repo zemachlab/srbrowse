@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="icon" href="css/favicon.ico" />
+<title>Analyses - SRbrowse</title>
+</head>
+<body>
+<header>
+<div class="wrap">
+	<span class="logo">SRbrowse</span>
+	<a href="/">Browse</a>
+	<a href="/datasets">Datasets</a>
+	<a href="/analyses">Analyses</a>
+	<a class="notify-button fright" data-processes="0">Activity</a>
+	<div class="notify-menu"></div>
+</div>
+</header>
+<div class="wrap">
+<div class="left">
+	<div class="module">
+		<h3>Assembly</h3>
+		<select name="genome"></select>
+	</div>
+</div>
+<div class="right">
+	<div class="analyses-data"></div>
+</div>
+<div id="hover"></div>
+<div id="darkbox"></div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/draw.js"></script>
+<script src="/js/analyses.js"></script>
+</body>
+</html>

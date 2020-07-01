@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="icon" href="css/favicon.ico" />
+<title>SRbrowse</title>
+</head>
+<body>
+<header>
+<div class="wrap">
+	<span class="logo">SRbrowse</span>
+	<a href="/">Browse</a>
+	<a href="/datasets">Datasets</a>
+	<a href="/analyses">Analyses</a>
+	<a class="notify-button fright" data-processes="0">Activity</a>
+	<div class="notify-menu"></div>
+</div>
+</header>
+<div class="wrap">
+<div class="left">
+	<div class="module">
+		<h3>Assembly</h3>
+		<select data-value="genome" name="genome"></select>
+	</div>
+	<div class="module">
+		<h3>Annotations <a class="fright add-annotation" data-icon="+"></a></h3>
+		<div class="data-list" data-type="annotations"></div>
+	</div>
+	<div class="module">
+		<h3>Tracks</h3>
+		<div class="data-list" data-type="tracks"></div>
+	</div>
+	<div class="module">
+		<h3>Patterns</h3>
+		<div class="data-list" data-type="patterns"><div data-id="CG">CG</div><div data-id="CHN">CH</div><div data-id="CHG">CHG</div><div data-id="CHH">CHH</div></div>
+	</div>
+</div>
+<div class="right">
+	<div class="browser">
+		<div class="top">
+			<div class="seq-nav"><a class="action" data-action="zoomin">+</a> <a class="action" data-action="zoomout">-</a> <a class="action" data-action="moveleft2"><<</a> <a class="action" data-action="moveleft"><</a> <a class="action" data-action="moveright">></a> <a class="action" data-action="moveright2">>></a></div>
+			<span class="fright pos-nav">
+				<span class="pos-form">Sequence <select name="chr"></select>
+				<input type="text" name="pos" placeholder="Position" size="7"> <a class="button small moveto-button" data-icon="P"></a></span>
+				<input type="text" name="annotation_search" placeholder="Search" size="7" /> <a class="button small annotation-search" data-icon="s"></a>
+				<select data-value="display" name="display"><option value="methylation">Methylation</option><option value="reads">Reads</option><option value="stddev">Read sd.</option><option value="readvar">Stochasticity</option><option value="enzyme">Enzyme</option><option value="fully">Fully methylated</option><option value="zero">Zero-methylated</option></select>
+				<a class="browser-settings small button" data-icon="e" title="Settings"></a>
+				<span class="settings dropdown">
+					<h4>Display options</h4>
+					<p><span class="fright"><a class="small button" data-type="th" data-change="10">+</a><input data-value="th"><a class="small button" data-type="th" data-change="-10">-</a></span>Track size</p>
+					<p><span class="fright"><a class="small button" data-type="rh" data-change="1">+</a><input data-value="rh"><a class="small button" data-type="rh" data-change="-1">-</a></span>Read size</p>
+					<p><span class="fright"><a class="small button" data-type="ml" data-change="1">+</a><input data-value="ml"><a class="small button" data-type="ml" data-change="-1">-</a></span>Read min. Cs</p>
+					<h4>Region selection</h4>
+					<p><span class="fright"><a class="small button" data-type="mm" data-change="0.05">+</a><input data-value="mm"><a class="small button" data-type="mm" data-change="-0.05">-</a></span>Min. methyl</p>
+					<p><span class="fright"><a class="small button" data-type="mr" data-change="1">+</a><input data-value="mr"><a class="small button" data-type="mr" data-change="-1">-</a></span>Min. reads</p>
+					<p><span class="fright"><a class="small button" data-type="rspan" data-change="5">+</a><input data-value="rspan"><a class="small button" data-type="rspan" data-change="-5">-</a></span>Max. span</p>
+					<p><span class="fright"><a class="small button" data-type="rsites" data-change="1">+</a><input data-value="rsites"><a class="small button" data-type="rsites" data-change="-1">-</a></span>Sites per region</p>
+				</span>
+			</span>
+		</div>
+		<div class="svg_container">
+			<svg width="1000" height="500"></svg>
+		</div>
+		<div id="tooltip"></div>
+	</div>
+</div>
+<div id="hover"></div>
+<div id="darkbox"></div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/draw.js"></script>
+<script src="/js/browser.js"></script>
+</body>
+</html>
