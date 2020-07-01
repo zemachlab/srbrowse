@@ -25,7 +25,7 @@ An interface for analyzing single read data
 
 ## Initiate backend:
 The tool can be run either as a service using PM2 (more stable) or as a node process:
-* As a process: `node server.js --base_dir=/home/myuser/mydir --port=3000
+* As a process: `node server.js --base_dir=/home/myuser/mydir --port=3000`
 * With PM2: `pm2 start server.js --name "srbrowse" -- --base_dir=/home/myuser/mydir --port=3000`
 
 The above assumes that the directory with the code also contains the data directories (saved tracks, assemblies, etc.). The `base_dir` parameter can be set to any directory that is writable by the node process. In addition, you can use a different port if you already have a service running on this port.
